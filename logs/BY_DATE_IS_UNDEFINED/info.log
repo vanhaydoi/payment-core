@@ -1,0 +1,47 @@
+2025-10-02T08:55:46.130+07:00 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-02T08:55:46.297+07:00 INFO  [main] c.e.p.PaymentCoreApplication - Starting PaymentCoreApplication using Java 17.0.0.1 with PID 15656 (D:\Java\Tai_lieu_thuc_tap\system_vnpay\payment-core\payment-core\target\classes started by Admin in D:\Java\Tai_lieu_thuc_tap\system_vnpay\payment-core\payment-core)
+2025-10-02T08:55:46.303+07:00 INFO  [main] c.e.p.PaymentCoreApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-02T08:55:47.839+07:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-02T08:55:47.936+07:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2025-10-02T08:55:49.773+07:00 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-10-02T08:55:49.794+07:00 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-10-02T08:55:49.798+07:00 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-02T08:55:49.799+07:00 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-02T08:55:49.918+07:00 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-02T08:55:49.919+07:00 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3522 ms
+2025-10-02T08:55:50.676+07:00 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-02T08:55:50.751+07:00 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-02T08:55:51.367+07:00 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-02T08:55:51.431+07:00 INFO  [main] com.zaxxer.hikari.HikariDataSource - SpringBootHikariPool - Starting...
+2025-10-02T08:55:52.131+07:00 INFO  [main] com.zaxxer.hikari.pool.HikariPool - SpringBootHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5876bed9
+2025-10-02T08:55:52.133+07:00 INFO  [main] com.zaxxer.hikari.HikariDataSource - SpringBootHikariPool - Start completed.
+2025-10-02T08:55:52.288+07:00 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-02T08:55:53.598+07:00 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-02T08:55:53.708+07:00 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-02T08:55:55.242+07:00 INFO  [main] c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+2025-10-02T08:55:55.242+07:00 INFO  [main] c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+2025-10-02T08:55:55.589+07:00 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-10-02T08:55:55.627+07:00 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-10-02T08:55:55.637+07:00 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: localhost:5672
+2025-10-02T08:55:55.781+07:00 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#1a865ebf:0/SimpleConnection@1f13eabb [delegate=amqp://guest@127.0.0.1:5672/, localPort=56960]
+2025-10-02T08:55:55.792+07:00 INFO  [main] o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (payment.queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-10-02T08:55:55.937+07:00 INFO  [main] c.e.p.PaymentCoreApplication - Started PaymentCoreApplication in 10.634 seconds (process running for 12.094)
+2025-10-02T08:57:02.575+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.p.service.PaymentConsumer - message: {"tokenKey":"1601353776839FT19310RH6P1","apiID":"restPayment","mobile":"0145225630","bankCode":"970445","accountNo":"0001100014211002","payDate":"20200929112923","additionalData":"13","debitAmount":11200,"respCode":"00","respDesc":"SUCCESS","traceTransfer":"FT19310RH6P1","messageType":"1","checkSum":"42585eddfd488292698fda7b6d79b39ba758d44b5c763256f89a4faa7d8e4e65","orderCode":"FT19310RH6P1","userName":"cntest001","realAmount":"11200","promotionCode":"","addValue":"{\"payMethod\":\"01\",\"payMethodMMS\":1}"}
+2025-10-02T08:57:02.665+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.p.service.PaymentConsumer - paymentRequest: PaymentRequest(tokenKey=1601353776839FT19310RH6P1, apiID=restPayment, mobile=0145225630, bankCode=970445, accountNo=0001100014211002, payDate=20200929112923, additionalData=13, debitAmount=11200, respCode=00, respDesc=SUCCESS, traceTransfer=FT19310RH6P1, messageType=1, checkSum=42585eddfd488292698fda7b6d79b39ba758d44b5c763256f89a4faa7d8e4e65, orderCode=FT19310RH6P1, userName=cntest001, realAmount=11200, promotionCode=, addValue={"payMethod":"01","payMethodMMS":1})
+2025-10-02T08:57:02.677+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.p.s.PaymentTransactionServiceImpl - Khi chưa mapping: PaymentRequest(tokenKey=1601353776839FT19310RH6P1, apiID=restPayment, mobile=0145225630, bankCode=970445, accountNo=0001100014211002, payDate=20200929112923, additionalData=13, debitAmount=11200, respCode=00, respDesc=SUCCESS, traceTransfer=FT19310RH6P1, messageType=1, checkSum=42585eddfd488292698fda7b6d79b39ba758d44b5c763256f89a4faa7d8e4e65, orderCode=FT19310RH6P1, userName=cntest001, realAmount=11200, promotionCode=, addValue={"payMethod":"01","payMethodMMS":1})
+2025-10-02T08:57:02.678+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.p.s.PaymentTransactionServiceImpl - result(Khi đã mapping): com.example.payment_core.entity.Payment@45464605
+2025-10-02T08:57:03.389+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.p.service.PartnerApiServiceImpl - Save data request in api
+2025-10-02T08:59:28.360+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-10-02T08:59:28.609+07:00 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-10-02T08:59:28.611+07:00 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-02T08:59:28.963+07:00 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-02T08:59:30.079+07:00 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-02T08:59:30.081+07:00 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - SpringBootHikariPool - Shutdown initiated...
+2025-10-02T08:59:30.090+07:00 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - SpringBootHikariPool - Shutdown completed.

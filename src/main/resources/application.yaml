@@ -1,0 +1,48 @@
+server:
+  port: 8081
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: auto
+        prefetch: 1
+        default-requeue-rejected: false
+        retry:
+          enabled: false
+    payment:
+      queue: "payment.queue"
+      exchange: "payment.exchange"
+      routingKey: "payment.routing.key"
+
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/payment"
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: SpringBootHikariPool
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+banks:
+  - bankCode: "970445"
+    privateKey: "ghffffffffff"
+    ips: "10.0.0.1"
+  - bankCode: "970446"
+    privateKey: "jjjjjjjj"
+    ips: "172.16.0.1"
+partner:
+  api:
+    url: "https://api.foodbook.vn/ipos/ws/xpartner/callback/vnpay"
+    timeout: 30000
